@@ -123,14 +123,10 @@ h1 {
     margin-bottom: 49px;
 }
 
-h1 a {
+h1 a img {
     display: block;
-}
-
-h1 img {
-    width: 85px;
-    height: 33px;
-    max-width: 100%;
+    width: 100%;
+    height: auto;
 }
 
 h1:hover {

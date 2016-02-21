@@ -18,7 +18,7 @@
 
     <header class="site-header">
         <div class="container-fluid">
-            <h1 class="logo"><a href="<?php echo home_url();?>"><img src="/wp-content/themes/hw18_wordpress_first/img/logo-1.svg" alt="BlogIn Logo"></a></h1>
+            <h1 class="logo"><a href="<?php echo home_url();?>"><img src="/wp-content/themes/hw18_wordpress_first/img/logo-1.png" alt="BlogIn Logo"></a></h1>
 
             <nav class="site-nav">
 
