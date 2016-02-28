@@ -1,0 +1,699 @@
+/*
+Theme name - hw19
+*/
+
+/*===================
+   fonts
+   ====================*/
+
+@font-face {
+    font-family: 'Novecento DemiBold';
+    src: url('fonts/novecento_wide_demibold-webfont.eot');
+    src: url('fonts/novecento_wide_demibold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/novecento_wide_demibold-webfont.woff') format('woff'),
+    url('fonts/novecento_wide_demibold-webfont.ttf') format('truetype'),
+    url('fonts/novecento_wide_demibold-webfont.svg#novecento_sans_widedemibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('fonts/helveticaneue-regular-webfont.eot');
+    src: url('fonts/helveticaneue-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/helveticaneue-regular-webfont.woff2') format('woff2'),
+    url('fonts/helveticaneue-regular-webfont.woff') format('woff'),
+    url('fonts/helveticaneue-regular-webfont.ttf') format('truetype'),
+    url('fonts/helveticaneue-regular-webfont.svg#helveticaneueregular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*===================
+   base
+   ====================*/
+
+body {
+    background: #ffffff;
+    font-size: 16px;
+    line-height: 1.5em;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    letter-spacing: 1.3px;
+}
+
+.wrapper {
+    overflow: hidden;
+    min-width: 320px;
+}
+
+.container-fluid {
+    max-width: 1180px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+.left {
+    float: left;
+    padding-left: 0;
+}
+
+.right {
+    float: right;
+    padding-right: 0;
+}
+
+.row {
+    margin: 0;
+}
+
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 0;
+}
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+    float: left;
+}
+.col-xs-12 {
+    width: 100%;
+}
+.col-xs-11 {
+    width: 91.66666667%;
+}
+.col-xs-10 {
+    width: 83.33333333%;
+}
+.col-xs-9 {
+    width: 75%;
+}
+.col-xs-8 {
+    width: 66.66666667%;
+}
+.col-xs-7 {
+    width: 58.33333333%;
+}
+.col-xs-6 {
+    width: 50%;
+}
+.col-xs-5 {
+    width: 41.66666667%;
+}
+.col-xs-4 {
+    width: 33.33333333%;
+}
+.col-xs-3 {
+    width: 25%;
+}
+.col-xs-2 {
+    width: 16.66666667%;
+}
+.col-xs-1 {
+    width: 8.33333333%;
+}
+
+@media (min-width: 768px) {
+    .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+        float: left;
+    }
+    .col-sm-12 {
+        width: 100%;
+    }
+    .col-sm-11 {
+        width: 91.66666667%;
+    }
+    .col-sm-10 {
+        width: 83.33333333%;
+    }
+    .col-sm-9 {
+        width: 75%;
+    }
+    .col-sm-8 {
+        width: 66.66666667%;
+    }
+    .col-sm-7 {
+        width: 58.33333333%;
+    }
+    .col-sm-6 {
+        width: 50%;
+    }
+    .col-sm-5 {
+        width: 41.66666667%;
+    }
+    .col-sm-4 {
+        width: 33.33333333%;
+    }
+    .col-sm-3 {
+        width: 25%;
+    }
+    .col-sm-2 {
+        width: 16.66666667%;
+    }
+    .col-sm-1 {
+        width: 8.33333333%;
+    }
+}
+@media (min-width: 992px) {
+    .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+        float: left;
+    }
+    .col-md-12 {
+        width: 100%;
+    }
+    .col-md-11 {
+        width: 91.66666667%;
+    }
+    .col-md-10 {
+        width: 83.33333333%;
+    }
+    .col-md-9 {
+        width: 75%;
+    }
+    .col-md-8 {
+        width: 66.66666667%;
+    }
+    .col-md-7 {
+        width: 58.33333333%;
+    }
+    .col-md-6 {
+        width: 50%;
+    }
+    .col-md-5 {
+        width: 41.66666667%;
+    }
+    .col-md-4 {
+        width: 33.33333333%;
+    }
+    .col-md-3 {
+        width: 25%;
+    }
+    .col-md-2 {
+        width: 16.66666667%;
+    }
+    .col-md-1 {
+        width: 8.33333333%;
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+        float: left;
+    }
+    .col-lg-12 {
+        width: 100%;
+    }
+    .col-lg-11 {
+        width: 91.66666667%;
+    }
+    .col-lg-10 {
+        width: 83.33333333%;
+    }
+    .col-lg-9 {
+        width: 75%;
+    }
+    .col-lg-8 {
+        width: 66.66666667%;
+    }
+    .col-lg-7 {
+        width: 58.33333333%;
+    }
+    .col-lg-6 {
+        width: 50%;
+    }
+    .col-lg-5 {
+        width: 41.66666667%;
+    }
+    .col-lg-4 {
+        width: 33.33333333%;
+    }
+    .col-lg-3 {
+        width: 25%;
+    }
+    .col-lg-2 {
+        width: 16.66666667%;
+    }
+    .col-lg-1 {
+        width: 8.33333333%;
+    }
+}
+
+/*===================
+   clear
+   ====================*/
+
+.clearfix:before,
+.clearfix:after,
+.container-fluid:before,
+.container-fluid:after,
+.site-nav:before,
+.site-nav:after,
+.row:before,
+.row:after {
+    display: table;
+    content: " ";
+}
+
+.clearfix:after,
+.container-fluid:after,
+.site-nav:after,
+.row:after {
+    clear: both;
+}
+
+/*===================
+   typography
+   ====================*/
+
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+.text-center {
+    text-align: center;
+}
+
+h2 {
+    color: rgb(79, 78, 78);
+    font-size: 1.75em;
+    font-weight: 700;
+    line-height: 1.875em;
+    text-transform: uppercase;
+    margin: 20px 20px 25px 20px;
+}
+
+p {
+    color: rgb(96, 96, 96);
+    font-size: 1em;
+    line-height: 1.25em;
+}
+
+main p {
+    margin: 25px 20px 30px 20px;
+}
+
+a {
+    font-size: 1em;
+    line-height: 1.25em;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: rgb(88, 201, 58);
+    outline: none;
+}
+
+/*===================
+   header
+   ====================*/
+
+header .top {
+    border-bottom: 2px solid rgb(204, 204, 204);
+}
+
+h1 {
+    float: left;
+    margin-top: 40px;
+    margin-bottom: 35px;
+}
+
+h1 a img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+h1:hover {
+    opacity: 0.8;
+}
+
+header .social {
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+header .social > a {
+    display: inline-block;
+    margin-right: 10px;
+    width: 34px;
+    height: 34px;
+    text-align: center;
+    background-color: rgb(223, 223, 223);
+    color: #fff;
+    border-radius: 50%;
+}
+
+header .fa {
+    margin: 10px 10px;
+}
+
+header .social > a:last-of-type {
+    margin-right: 0;
+}
+
+header .social > a:hover {
+    color: rgb(102, 98, 98);
+}
+
+
+/*===================
+   Navigation menu
+   ====================*/
+
+.site-nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+.site-nav ul li {
+    margin: 0;
+    display: inline-block;
+    list-style: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.site-nav ul li a {
+    display: block;
+    margin: 30px 40px 30px 0;
+    font-family: Novecentowide;
+    font-size: 1.125em;
+    font-weight: 600;
+    line-height: 1.125em;
+    color: rgb(102, 98, 98);
+}
+
+.site-nav ul li a:hover {
+    color: rgb(135, 182, 114);
+}
+
+/*===================
+ main
+====================*/
+
+main .container-fluid {
+    padding-top: 80px;
+}
+
+.pagename {
+    background: url("img/bg.png") no-repeat;
+    background-size: cover; }
+
+.nothing {
+    padding: 55px 0;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.post-title {
+    font: 18px/24px "Novecento DemiBold", sans-serif !important;
+    text-transform: uppercase;
+    color: #5f5b5b;
+    transition: 400ms; }
+
+.post-title:hover {
+    color: #87b672;}
+
+.posts-holder .post {
+    text-align: center;
+    padding-bottom: 50px; }
+.posts-holder .post .img-holder {
+    position: relative;
+    max-width: 360px;
+    margin: 0 auto; }
+.posts-holder .post .img-holder img:not(.wrap-img),
+.posts-holder .post .img-holder .img-hover {
+    width: 74%;
+    height: 71%;
+    position: absolute;
+    top: 14%;
+    left: 13%; }
+.posts-holder .post .img-holder .img-hover {
+    display: none;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 999; }
+.posts-holder .post .img-holder .plus-holder {
+    width: 50px;
+    height: 50px;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    background: #464c52;
+    font-size: 24px;
+    line-height: 50px;
+    text-align: center;
+    color: #fefefe; }
+.posts-holder .post .img-holder:hover .img-hover,
+.posts-holder .post .img-holder:hover .plus-holder {
+    display: block;
+    transition: 400ms; }
+.posts-holder .post .img-holder:hover .plus-holder:hover {
+    background: #87b672; }
+.thumbnail-holder {
+    text-align: center;
+}
+.thumbnail-holder img {
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+}
+.breadcrumps {
+    padding: 25px 0;
+    text-align: center; }
+.breadcrumps a {
+    display: inline-block;
+    line-height: 24px;
+    color: #5f5b5b;
+    transition: 400ms; }
+.breadcrumps a:hover {
+    color: #87b672; }
+
+.need-site {
+    text-align: center;
+    padding: 55px 0;
+    border-top: 1px solid #ccc; }
+
+@media screen and (min-width: 768px) {
+    .short-about p {
+        max-width: 66%;
+        margin: 0 auto; }
+    .posts-holder .post {
+        text-align: left;
+        padding-right: 30px; }
+    .breadcrumps {
+        text-align: left; }
+    .breadcrumps a {
+        line-height: 40px; }
+    .need-site p {
+        width: 66%;
+        margin: 0 auto; } }
+
+.green-btn {
+    display: inline-block;
+    margin: 30px auto 0;
+    padding: 15px 20px;
+    background: #87b672;
+    font: 14px/18px "Novecento DemiBold", sans-serif;
+    text-transform: uppercase;
+    color: #fefefe;
+    transition: 400ms; }
+.green-btn:hover {
+    background: #8f8f8f;
+    color: #fefefe; }
+
+/*===================
+   footer
+   ====================*/
+
+footer {
+    background-color: #333;
+    color: #9b9999;
+}
+
+footer .social {
+    padding: 25px 15px 30px 0;
+}
+
+footer .social > a {
+    display: inline-block;
+    margin-right: 10px;
+    width: 34px;
+    height: 34px;
+    text-align: center;
+    background-color: #cacaca;
+    color: rgb(102, 98, 98);
+    border-radius: 50%;
+}
+
+footer .fa {
+    margin: 10px 10px;
+}
+
+footer .social > a:last-of-type {
+    margin-right: 0;
+}
+
+footer .social > a:hover {
+    background-color: #ffffff;
+}
+
+footer p {
+    font-size: 0.875em;
+    font-weight: 400;
+    line-height: 1.71;
+    margin-left: 0;
+}
+
+footer .logo-block p {
+    margin: 15px 0 0 -15px;
+}
+
+.first {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border-bottom: 2px solid #ccc;
+}
+
+footer .logo {
+    display: block;
+    float: left;
+    margin: 15px 0 0 0;
+}
+
+footer .logo:hover {
+    opacity: 0.8;
+}
+
+footer h2 {
+    color: #fefefe;
+    font-family: "Novecento DemiBold", sans-serif;
+    font-size: 1.125em;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-left: 0;
+}
+
+footer ul {
+    padding: 0;
+}
+
+footer ul li {
+    font-weight: 400;
+    font-size: 0.875em;
+    line-height: 1.71;
+}
+
+footer .bold {
+    font-family: "Novecento DemiBold", sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+footer ul li a {
+    color: #9b9999;
+}
+
+footer ul li a:hover {
+    color: #87b672;
+}
+
+.nav-link ul {
+    padding: 15px;
+}
+
+.nav-link ul li {
+    list-style-image: url("img/arrow.png");
+}
+
+.nav-link ul li a {
+    font-size: 0.875em;
+}
+
+input[type="email"] {
+    padding: 10px;
+    width: 80%;
+    border: none;
+    background-color: #4e4c4c;
+    box-sizing: border-box;
+    color: #fefefe;
+}
+
+input[type="submit"] {
+    width: 15%;
+    padding: 9px 5px;
+    background-color: #828282;
+    border: none;
+    color: #fefefe;
+}
+
+input[type="submit"]:hover {
+    background: #9c9c9c;
+}
+
+footer .copy,
+.footer-nav ul li a {
+    font-size: 0.75em;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.copy a,
+.footer-nav ul li a {
+    color: #cbcbcb;
+}
+
+.copy a:hover,
+.footer-nav ul li a:hover {
+    color: #87b672;
+}
+
+.footer-nav ul {
+    margin: 0;
+}
+
+.footer-nav li {
+    display: inline-block;
+    list-style: none;
+    cursor: pointer;
+    margin: 0 0 0 10px;
+}
+
+.end p, nav {
+    margin: 30px 0;
+    text-transform: uppercase;
+}
+
+.footer-nav ul li::after {
+    content: " / ";
+    font-size: 0.75em;
+    font-weight: 600;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.footer-nav ul li:last-of-type::after {
+    content: " ";
+}
+
+
+
+
