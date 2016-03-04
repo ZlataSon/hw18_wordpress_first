@@ -26,7 +26,7 @@ get_header();
                             <a class="post-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                             <p><?php the_excerpt(); ?></p>
 
-                            <div class="img-holder">
+                            <div class="img-holder img-responsive">
                                 <img class="wrap-img" src="<?php echo get_template_directory_uri(); ?>/img/monitor.png" alt="monitor">
                                 <?php the_post_thumbnail(); ?>
 

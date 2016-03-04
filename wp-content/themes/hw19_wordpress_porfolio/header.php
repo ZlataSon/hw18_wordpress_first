@@ -31,7 +31,8 @@
 
                     <?php
                     $args = array(
-                        'theme_location' => 'primary'
+                        'theme_location' => 'primary',
+                        'sort_column' => 'menu_order'
                     );
                     ?>
 

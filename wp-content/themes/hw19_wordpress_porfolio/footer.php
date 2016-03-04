@@ -35,7 +35,8 @@
 
             <?php
             $args = [
-                'theme_location' => 'footer_nav'
+                'theme_location' => 'nav-link',
+                'sort_column' => 'menu_order'
             ];
 
             wp_nav_menu($args); ?>
@@ -60,7 +61,8 @@
             <nav class="footer-nav right">
                 <?php
                 $args = [
-                    'theme_location' => 'footer_menu'
+                    'theme_location' => 'footer-nav',
+                    'sort_column' => 'menu_order'
                 ];
 
                 wp_nav_menu($args); ?>
