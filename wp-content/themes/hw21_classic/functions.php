@@ -133,6 +133,22 @@ function hw21_classic_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'hw21_classic_scripts' );
 
+
+/**
+ * Pagination
+ */
+
+function pagination(){
+	$pagination = get_the_posts_pagination( array(
+			'mid_size' => 2,
+			'prev_text' => __( '<span class="fa fa-chevron-left"></span>', 'textdomain' ),
+			'next_text' => __( '<span class="fa fa-chevron-right"></span>', 'textdomain' ),
+			'screen_reader_text' => __( ' ', 'textdomain' ),
+	) );
+	echo $pagination;
+}
+
+
 /**
  * Implement the Custom Header feature.
  */

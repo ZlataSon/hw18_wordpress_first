@@ -19,6 +19,12 @@ get_header(); ?>
 			<div class="container-fluid">
 
 				<?php
+				// the query to set the posts per page to 3
+				$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+				$args = array('posts_per_page' => 3, 'paged' => $paged );
+				query_posts($args); ?>
+
+				<?php
 				if (have_posts()) :
 
 					if (is_home() && !is_front_page()) : ?>
@@ -41,13 +47,15 @@ get_header(); ?>
 
 					endwhile;
 
-					the_posts_navigation();
-
 				else :
 
 					get_template_part('template-parts/content', 'none');
 
 				endif; ?>
+
+				<!-- pagination -->
+				<?php pagination(); ?>
+
 			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->

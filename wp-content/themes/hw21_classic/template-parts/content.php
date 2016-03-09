@@ -11,6 +11,7 @@
 <div class="container-fluid">
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <header class="entry-header">
+
             <?php
             if (is_single()) {
                 the_title('<h2 class="entry-title">', '</h2>');

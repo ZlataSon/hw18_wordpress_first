@@ -39,7 +39,30 @@
                         aria-expanded="false"><span class="fa fa-navicon"></span></button>
                 <?php wp_nav_menu(array('theme_location' => 'primary', 'menu_id' => 'primary-menu')); ?>
             </nav><!-- #site-navigation -->
+
         </div>
+
 	</header><!-- #masthead -->
+
+    <?php
+    if (is_home() || is_page('news') || is_category() || is_single()) {
+        ?>
+        <div class="category-block">
+            <div class="container-fluid">
+                <ul class="category-list">
+                    <?php
+                    $args = array(
+                        'title_li'           => __( '' ),
+                        'current_category'   => 1,
+                        'taxonomy'           => 'category'
+                    );
+                    wp_list_categories( $args );
+                    ?>
+                </ul>
+            </div>
+        </div>
+        <?php
+    }
+    ?>
 
 	<div id="content" class="site-content">
