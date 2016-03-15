@@ -148,7 +148,6 @@ function pagination(){
 	echo $pagination;
 }
 
-
 /**
  * Implement the Custom Header feature.
  */
