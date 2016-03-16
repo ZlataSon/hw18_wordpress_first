@@ -19,12 +19,15 @@
                 the_title('<h2 class="entry-title"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">', '</a></h2>');
             }
 
-            if ('post' === get_post_type()) : ?>
-                <div class="entry-meta">
-                    <?php hw21_blog_name_posted_on(); ?>
-                </div><!-- .entry-meta -->
+            if ( 'post' === get_post_type() ) : ?>
+
+                <div class="post-date">
+                    <p class="post-day"><?php	the_time('j'); ?></p>
+                    <p class="post-month"><?php	the_time('F'); ?></p>
+                </div>
                 <?php
             endif; ?>
+            <?php HW21_blog_name_entry_footer(); ?>
         </header><!-- .entry-header -->
 
         <div class="entry-content">

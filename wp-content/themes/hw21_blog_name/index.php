@@ -14,6 +14,7 @@
 
 get_header(); ?>
 
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			<div class="container-fluid">
@@ -93,5 +94,5 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+get_sidebar('sidebar-1');
 get_footer();

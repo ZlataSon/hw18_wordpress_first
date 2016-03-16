@@ -65,12 +65,12 @@ function hw21_blog_name_setup() {
 	 * See https://developer.wordpress.org/themes/functionality/post-formats/
 	 */
 	add_theme_support( 'post-formats', array(
-		'aside',
-		'image',
-		'video',
-		'quote',
-		'gallery',
-		'link',
+			'aside',
+			'image',
+			'video',
+			'quote',
+			'gallery',
+			'link',
 	) );
 
 	// Set up the WordPress core custom background feature.
@@ -90,7 +90,7 @@ add_action( 'after_setup_theme', 'hw21_blog_name_setup' );
  * @global int $content_width
  */
 function hw21_blog_name_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'hw21_blog_name_content_width', 940 );
+	$GLOBALS['content_width'] = apply_filters( 'hw21_blog_name_content_width', 640 );
 }
 add_action( 'after_setup_theme', 'hw21_blog_name_content_width', 0 );
 
@@ -109,8 +109,18 @@ function hw21_blog_name_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	register_sidebar( array(
+			'name'          => esc_html__( 'Sidebar contact', 'hw21_blog_name' ),
+			'id'            => 'sidebar-2',
+			'description'   => '',
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+	) );
 }
 add_action( 'widgets_init', 'hw21_blog_name_widgets_init' );
+
 
 /**
  * Enqueue scripts and styles.
@@ -118,7 +128,7 @@ add_action( 'widgets_init', 'hw21_blog_name_widgets_init' );
 function hw21_blog_name_scripts() {
 	wp_enqueue_style( 'hw21_blog_name-style', get_stylesheet_uri() );
 
-	wp_enqueue_style( 'hw21serhatyi-flexslider', get_template_directory_uri() . '/css/flexslider.css' );
+	wp_enqueue_style( 'hw21_blog_name-flexslider', get_template_directory_uri() . '/css/flexslider.css' );
 
 	wp_enqueue_style( 'hw21_blog_name-styleAwesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' );
 
@@ -202,7 +212,7 @@ add_action( 'customize_register', 'mytheme_customize_register' );
 
 
 // Custom Post Type Slider
-function hw21serhatyi_custom_post_type() {
+function hw21_blog_name_custom_post_type() {
 	$labels = array (
 			'name' => 'Slider',
 			'singular_name' => 'Slide',
@@ -238,7 +248,7 @@ function hw21serhatyi_custom_post_type() {
 	);
 	register_post_type('slider', $args);
 }
-add_action('init', 'hw21serhatyi_custom_post_type');
+add_action('init', 'hw21_blog_name_custom_post_type');
 
 /**
  * Implement the Custom Header feature.
